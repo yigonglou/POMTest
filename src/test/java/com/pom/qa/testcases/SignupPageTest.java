@@ -1,6 +1,7 @@
 package com.pom.qa.testcases;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -8,15 +9,15 @@ import org.testng.annotations.Test;
 
 import com.pom.qa.base.TestBase;
 import com.pom.qa.pages.HomePage;
-import com.pom.qa.pages.LoginPage;
+import com.pom.qa.pages.SignupPage;
 
 import junit.framework.Assert;
 
 
 
-public class SignupPageTest {
+public class SignupPageTest extends TestBase {
 	
-	LoginPage signuppage;
+	SignupPage signuppage;
 	HomePage  homepage;
 
 	public SignupPageTest() {
@@ -27,26 +28,20 @@ public class SignupPageTest {
 	@BeforeMethod
 	public void setUp() throws IOException {
 		initialization();
-		signupage = new SignupPage();
+		homepage = new HomePage(driver);
+		homepage.getSignupPageBtn().click();
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		System.out.println("LogIn Page url " + driver.getCurrentUrl());
+		signuppage = new SignupPage();
 	}
 
 
 	@Test(priority=1)
-	public void loginPageTitleTest() {
-		String title = signupapge.getSignupPageTitle();
+	public void SignupPageTitleTest() {
+		String title = signuppage.validateSignupPageTitle();
 		Assert.assertEquals(title, "Free CRM #1 cloud software for any business large or small");
 	}
 	
-	@Test (priority=2)
-	public void crmLogoTest() {
-		boolean flag = loginpage.validateCRMImage();
-		Assert.assertTrue(flag);
-	}
-	
-	@Test(priority=3)
-	public void loginTest() {
-		homepage= loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
-	}
 	
 	
 	@AfterMethod

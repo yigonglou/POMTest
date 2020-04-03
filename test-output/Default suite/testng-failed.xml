@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.pom.qa.testcases.LoginPageTest">
+      <class name="com.pom.qa.testcases.SignupPageTest">
         <methods>
-          <include name="loginTest"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="SignupPageTitleTest"/>
         </methods>
-      </class> <!-- com.pom.qa.testcases.LoginPageTest -->
+      </class> <!-- com.pom.qa.testcases.SignupPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

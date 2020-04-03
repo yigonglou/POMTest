@@ -11,41 +11,34 @@ public class SignupPage extends TestBase{
 	
 
 			@FindBy(xpath="//button[contain(text(),'Sign Up')]") 
-			WebElement signBtn;
+			WebElement signupBtn;
 			@FindBy(xpath="//img[contains(@class,'img-responsive')]")
 			WebElement crmLogo;
 			
+			public void SignupPage(WebDriver driver) {
+				  PageFactory.initElements(driver, this);
+			}
+
 			
 		    public boolean validateCRMImage() {
 		    	return crmLogo.isDisplayed();
 		    }
 
-		    public HomePage signup(String un, String pwd) {
-		    	username.sendKeys(un);
-		    	password.sendKeys(pwd);
-		    	return new HomePage();
+		    
+		    public WebElement getSignupPageBtn() {
+		    	return signupBtn;   	
 		    }
 		    
-		    
-			
-			
-			@FindBy(find_element_by_link_text("Enterprise")) WebElement signBtn;
-			
-			public void LoginPage(WebDriver driver) {
-			  PageFactory.initElements(driver, this);
-			}
-
-		    public String validateLogoinpageTitle() {
+		   	
+		   public String validateSignupPageTitle() {
 		    	return driver.getTitle();
 		    }
 		    
-		    public boolean validateCRMImage() {
-		    	return crmLogo.isDisplayed();
-		    }
-		    
-		   	    
-		    public void signup(String un, String pwd) {
+		  	    
+
+		    public HomePage signup(String un, String pwd) {
 		    	
+		    	return new HomePage(driver);
 		    }
 		    
 		    

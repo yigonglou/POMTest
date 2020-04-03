@@ -31,28 +31,27 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">118.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0</td><td class="numi">73.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">com.pom.qa.testcases.LoginPageTest</td><td><a href="#m1"><b>loginTest</b>  </a></td><td class="numi">1</td><td>1585898525493</td><td class="numi">2754</td></tr>
-<tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">com.pom.qa.testcases.LoginPageTest</td><td><a href="#m2"><b>loginPageTitleTest</b>  </a></td><td class="numi">1</td><td>1585898480437</td><td class="numi">41</td></tr>
+<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">com.pom.qa.testcases.SignupPageTest</td><td><a href="#m1"><b>setUp</b>  </a></td><td class="numi">1</td><td>1585900387381</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="1">com.pom.qa.testcases.SignupPageTest</td><td><a href="#m2"><b>tearDown</b>  </a></td><td class="numi">1</td><td>1585900460413</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="1">com.pom.qa.testcases.SignupPageTest</td><td><a href="#m3"><b>SignupPageTitleTest</b>  </a></td><td class="numi">1</td><td>1585900460397</td><td class="numi">0</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">com.pom.qa.testcases.LoginPageTest:loginTest</h2>
+<h2 id="m1">com.pom.qa.testcases.SignupPageTest:setUp</h2>
 <div style="padding-left:3em">
-<p>invalid selector: Unable to locate an element with the xpath expression //div[contain(text(),&apos;Login&apos;)] because of the following error:
-SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//div[contain(text(),&apos;Login&apos;)]&apos; is not a valid XPath expression.
+<p>timeout: Timed out receiving message from renderer: -0.010
   (Session info: chrome=80.0.3987.163)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;WINDOWS-AH38UOK&apos;, ip: &apos;192.168.1.91&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\daniel\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55529}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 33db5d976c9fc96bb2684939160363cd
-*** Element info: {Using=xpath, value=//div[contain(text(),&apos;Login&apos;)]}</p>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\daniel\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59470}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b8b3a473e8f7baf6439c3fe702502f9d</p>
 java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 <br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -63,18 +62,14 @@ java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native
 <br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 <br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-<br/>at com.sun.proxy.$Proxy12.click(Unknown Source)
-<br/>at com.pom.qa.pages.LoginPage.login(LoginPage.java:54)
-<br/>at com.pom.qa.testcases.LoginPageTest.loginTest(LoginPageTest.java:47)
-<br/>25 lines not shown
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+<br/>at com.pom.qa.base.TestBase.initialization(TestBase.java:54)
+<br/>at com.pom.qa.testcases.SignupPageTest.setUp(SignupPageTest.java:30)
+<br/>27 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.pom.qa.testcases.LoginPageTest:loginPageTitleTest</h2>
+<h2 id="m2">com.pom.qa.testcases.SignupPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.pom.qa.testcases.SignupPageTest:SignupPageTitleTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

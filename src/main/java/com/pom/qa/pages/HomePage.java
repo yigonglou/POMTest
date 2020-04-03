@@ -51,6 +51,10 @@ public class HomePage extends TestBase {
 		return signupBtn.getText();
 		}
 	
+	public WebElement getSignupPageBtn () {
+		
+		return signupBtn;
+	}
 	
 }
 
