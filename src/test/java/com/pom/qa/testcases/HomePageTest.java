@@ -48,9 +48,8 @@ public class HomePageTest extends TestBase {
   
 	
 	@Test (priority=4)
-	public void crmLogoExistTest() {
-		boolean flag = homepage.validateCrmLogoExist();
-		Assert.assertTrue(flag);
+	public void signupLnkExistTest() {
+		Assert.assertEquals(homepage.getSignupLnkText(),"SIGN UP" );
 	}
 	
 	@AfterMethod

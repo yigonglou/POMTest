@@ -29,17 +29,17 @@ public class SignupPageTest extends TestBase {
 	public void setUp() throws IOException {
 		initialization();
 		homepage = new HomePage(driver);
-		homepage.getSignupPageBtn().click();
+		homepage.getSignupLnk().click();
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		System.out.println("LogIn Page url " + driver.getCurrentUrl());
-		signuppage = new SignupPage();
+		System.out.println("Sign up Page url " + driver.getCurrentUrl());
+		signuppage = new SignupPage(driver);
 	}
 
 
 	@Test(priority=1)
 	public void SignupPageTitleTest() {
 		String title = signuppage.validateSignupPageTitle();
-		Assert.assertEquals(title, "Free CRM #1 cloud software for any business large or small");
+		Assert.assertEquals(title, "Cogmento CRM");
 	}
 	
 	

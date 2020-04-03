@@ -9,19 +9,13 @@ import com.pom.qa.base.TestBase;
 
 public class HomePage extends TestBase {
 
-
 	@FindBy(xpath="//span[contains(text(), 'Log In')]")  WebElement loginBtn;
 
-	@FindBy(xpath="//a[contains(text(), 'Sign Up')]")  WebElement signupBtn;
-
-	//	@FindBy(xpath="//input[@type='submit'") 
-	//	WebElement loginBtn;
-	@FindBy(xpath="//button[contain(text(),'Sign Up')]") 
-	WebElement signBtn;
-	//@FindBy(xpath="//img[contains(@class,'img-responsive')]") 
+	@FindBy(xpath="//a[contains(text(), 'Sign Up')]")  WebElement signupLnk;
 	
-	@FindBy(xpath="//img[contains(@class,'img-responsive')]")
-	WebElement crmLogo;
+	@FindBy(xpath="//span[contains(text(), 'Sign Up')]")  WebElement signupBtn;
+
+	@FindBy(xpath="//img[contains(@class,'img-responsive')]") WebElement crmLogo;
 
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -50,9 +44,16 @@ public class HomePage extends TestBase {
 		System.out.println(signupBtn.getText());
 		return signupBtn.getText();
 		}
+	public WebElement getSignupLnk() {
+		return signupLnk;
+	}
 	
-	public WebElement getSignupPageBtn () {
-		
+	public String getSignupLnkText () {
+		System.out.println(signupLnk.getText());
+		return signupLnk.getText();
+	}
+	
+	public WebElement getSignupPageBtn () {	
 		return signupBtn;
 	}
 	

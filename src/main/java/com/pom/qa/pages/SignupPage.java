@@ -10,12 +10,16 @@ import com.pom.qa.base.TestBase;
 public class SignupPage extends TestBase{
 	
 
-			@FindBy(xpath="//button[contain(text(),'Sign Up')]") 
+			@FindBy(xpath="//span[contain(text(),'Sign Up')]") 
 			WebElement signupBtn;
+			
+			@FindBy(xpath="//a[contain(text(),'Sign Up')]") 
+			WebElement signupLnk;
+			
 			@FindBy(xpath="//img[contains(@class,'img-responsive')]")
 			WebElement crmLogo;
 			
-			public void SignupPage(WebDriver driver) {
+			public SignupPage(WebDriver driver) {
 				  PageFactory.initElements(driver, this);
 			}
 
@@ -29,13 +33,17 @@ public class SignupPage extends TestBase{
 		    	return signupBtn;   	
 		    }
 		    
+		    
+		    public WebElement getSignupPageLnk() {
+		    	return signupLnk;   	
+		    }
+		    
 		   	
 		   public String validateSignupPageTitle() {
 		    	return driver.getTitle();
 		    }
 		    
-		  	    
-
+		  	   
 		    public HomePage signup(String un, String pwd) {
 		    	
 		    	return new HomePage(driver);

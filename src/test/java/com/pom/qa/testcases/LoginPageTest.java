@@ -25,8 +25,7 @@ public class LoginPageTest extends TestBase {
 	@BeforeMethod
 	public void setUp() throws IOException, InterruptedException {
 		initialization();
-		homepage = new HomePage(driver);
-				
+		homepage = new HomePage(driver);		
 		System.out.println("Home Page url " + driver.getCurrentUrl());
 	    homepage.getLoginBtn().click();
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -44,7 +43,9 @@ public class LoginPageTest extends TestBase {
 	
 	@Test(priority=2)
 	public void loginTest() {
-		homepage= loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
+		loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
+	     
+	
 	}
 	
 	

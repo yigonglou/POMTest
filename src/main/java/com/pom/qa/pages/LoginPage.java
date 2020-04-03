@@ -7,9 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.oracle.tools.packager.Log;
 import com.pom.qa.base.TestBase;
-import com.pom.qa.util.TestUtil;
 
 public class LoginPage extends TestBase {
 	
@@ -22,10 +20,10 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath="//div[contain(text(),'Login')]") 
 	WebElement loginSubBtn;
 	//@FindBy(xpath="//input[@type='submit'") 
-	@FindBy(xpath="//Sapn[contain(text(),'Log In')])")
+	@FindBy(xpath="//Span[contain(text(),'Log In')])")
 	WebElement loginBtn;
 	@FindBy(xpath="//button[contain(text(),'Sign Up')]") 
-	WebElement signBtn;
+	WebElement signupBtn;
 	@FindBy(xpath="//img[contains(@class,'img-responsive')]")
 	WebElement crmLogo;
 	
@@ -46,6 +44,12 @@ public class LoginPage extends TestBase {
     public WebElement getLoginBtn() {
     	return loginBtn;
     }
+    
+    public WebElement getLoginSubBtn() {
+    	return loginSubBtn;
+    }
+    
+    
     
     public HomePage login(String un, String pwd) {
     	
